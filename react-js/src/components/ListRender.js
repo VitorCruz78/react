@@ -2,13 +2,23 @@ import React, { useState } from "react";
 
 export default function ListRender() {
     const [list] = useState(["Vitor", "Picolo"])
-    const [users] = useState([
-        { id: 1295847, name: "Vitor", age: 16 },
-        { id: 817936, name: "Luiz", age: 64 },
-        { id: 8771553, name: "Picolo", age: 27 }
+    const [users, setUsers] = useState([
+        { id: 1, name: "Vitor", age: 16 },
+        { id: 2, name: "Luiz", age: 64 },
+        { id: 3, name: "Picolo", age: 27 }
     ])
 
     const [showId, setShowId] = useState(false)
+
+    const deleteRandom = () => {
+        const randomNumber = Math.floor(Math.random() * 4);
+        //Math. floor(x) retorna o menor número inteiro dentre o número "x"
+        // Math.random = método estático retorna um número pseudoaleatório de ponto flutuante que é maior ou igual a 0 e menor que 1
+
+        setUsers((prevUsers) => {
+            return prevUsers.filter((user) => randomNumber !== user.id)
+        })
+    };
 
     return (
         <div>
@@ -31,9 +41,10 @@ export default function ListRender() {
                     showId ?
                         <button onClick={() => setShowId(false)}>Voltar</button>
                         :
-                        <button onClick={() => setShowId(true)}>Cancelar</button>
+                        <button onClick={() => setShowId(true)}>Ver id's</button>
                 }
             </ul>
+            <button onClick={deleteRandom}>Delete random user</button>
         </div>
     )
 }
