@@ -11,7 +11,10 @@ export default function Home() {
       {/*props*/}
       <ShowUserName name="Vitão" />
       {/*destructuring*/}
-      <CarDetails brand="BMW" km={20000} color="azul" />
+      <CarDetails brand="BMW" km={20000} color="azul" newCar={true} />
+      {/*reaproveitamento de componentes*/}
+      <CarDetails brand="Picasso" km={10000} color="cinza" newCar={false} />
+      <CarDetails brand="Ford" km={5000} color="amarelo" newCar={true} />
     </>
   )
 }
