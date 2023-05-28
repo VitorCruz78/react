@@ -7,6 +7,7 @@ import Container from '@/components/Container'
 import ExecuteFunction from '@/components/ExecuteFunction'
 import Message from '@/components/Message'
 import ChangeMessageState from '@/components/ChangeMessageState'
+import UserDetails from '@/components/UserDetails'
 
 export default function Home() {
 
@@ -25,6 +26,12 @@ export default function Home() {
   const handleMessage = (msg) => {
     setMessage(msg)
   }
+
+  const peoples = [
+    { nome: 'Vitor' },
+    { idade: '16' },
+    { profissão: 'Programador' }
+  ]
 
   return (
     <>
@@ -51,6 +58,10 @@ export default function Home() {
       {/* state lift */}
       <Message msg={message} />
       <ChangeMessageState handleMessage={handleMessage} />
+      {/*task*/}
+      {peoples.map((details) => (
+        <UserDetails idade={details.idade} />
+      ))}
     </>
   )
 }
