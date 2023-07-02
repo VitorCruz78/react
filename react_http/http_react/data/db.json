@@ -29,6 +29,46 @@
       "name": "Capa de chuva",
       "price": "50.40",
       "id": 6
+    },
+    {
+      "name": "Quiosque",
+      "price": "45",
+      "id": 7
+    },
+    {
+      "name": "Quiosque",
+      "price": "45",
+      "id": 8
+    },
+    {
+      "name": "Chuchu ao molho branco",
+      "price": "18",
+      "id": 9
+    },
+    {
+      "name": "banana",
+      "price": "6",
+      "id": 10
+    },
+    {
+      "name": "Maça",
+      "price": "5",
+      "id": 11
+    },
+    {
+      "name": "Farofa do juca",
+      "price": "6",
+      "id": 12
+    },
+    {
+      "name": "ola",
+      "price": "2",
+      "id": 13
+    },
+    {
+      "name": "maionese",
+      "price": "13",
+      "id": 14
     }
   ]
 }
